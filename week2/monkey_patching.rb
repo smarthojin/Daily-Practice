@@ -1,5 +1,6 @@
 # Pre-Exercise Note
-# From this point on, we will be using the command line and pry to test our code, navigate our computer, and perform many other amazing tasks.
+# From this point on, we will be using the command line and pry to test our code, navigate our computer, 
+# and perform many other amazing tasks.
 
 # This means that we are not using repl.it anymore to test our code.
 
@@ -127,6 +128,6 @@
 # #substrings(string)
 # #subwords(word, dictionary)
 # Although these exercises are from the prepwork and come with specs, use this opportunity to practice your own testing skills. 
-Write out each method, think of a few different example cases, and test out your code in pry.
+# Write out each method, think of a few different example cases, and test out your code in pry.
 
 # If you are having a tough time thinking of example cases, check out the specs. You can use those examples to test your solutions. Don't forget to move your enumerables_array.rb into a lib directory!
