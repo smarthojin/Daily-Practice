@@ -73,7 +73,7 @@
 # a.my_all? { |num| num > 1 } # => false
 # a.my_all? { |num| num < 4 } # => true
 # Array
-# My Flatten
+My Flatten
 # my_flatten should return all elements of the array into a new, one-dimensional array. Hint: use recursion!
 
 # Example:

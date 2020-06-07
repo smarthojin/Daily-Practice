@@ -32,7 +32,12 @@ class Array
     false
   end
     
-
+  def my_all?(&block)
+    self.my_each do |i|
+      return false if !block.call(i)
+    end
+    true
+  end
 
 end
 
@@ -58,6 +63,20 @@ def nc_my_reject(array, &block)
     result.push (i) unless block.call{i}
   end
   results
+end
+
+def my_any?(array, &block)
+  array.my_each do |i|
+    return true if block.call(i)
+  end
+  false
+end
+
+def my_all?(array, &block)
+    array.my_each do |i|
+      return false if !block.call(i)
+    end
+    true
 end
 
 array.my_any?{ |ele| ele.is_a? String}
