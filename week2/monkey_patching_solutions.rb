@@ -38,8 +38,38 @@ class Array
     end
     true
   end
+ 
+
+  # def my_flatten_non_recursion
+  #   results = [] 
+  #   starter = true
+  #   while starter 
+  #     my
+
+
+  # end
+
+  def my_flatten_recursive 
+    results = []
+    self.my_each do |ele|
+      if ele.is_a? Array 
+        results.concat(ele.my_flatten_recursive)
+      else 
+        results<< ele
+      end
+    end
+    results
+
+  end
+
 
 end
+
+# [ [1,23,24,], [123,[23],41], 123] 
+ 
+
+# [ [1,[23, [24]]], 123, [[1,2,3, [23, [1,[3,4]]]]]] = [1, 23, 24 ,123 ,1 ,2 ,3, 23, 1, 3, 4]
+
 
 
 def nc_my_each(array, &block)
@@ -79,4 +109,11 @@ def my_all?(array, &block)
     true
 end
 
-array.my_any?{ |ele| ele.is_a? String}
+# array.my_any?{ |ele| ele.is_a? String}
+
+
+var1 = [ [1,23,24,], [123,[23],41], 123]
+
+var2 = var1.my_flatten_recursive
+
+print(var2)
